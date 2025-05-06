@@ -1,0 +1,31 @@
+<script src="/js/Produto/loja.js"></script>
+<div class="container mt-4">
+    <h1 class="mb-4">Produtos da Loja</h1>
+
+    <div class="mb-4">
+        <button id="btnVerCarrinho" class="btn btn-warning">
+            <i class="fas fa-shopping-cart"></i> Ver Carrinho
+        </button>
+    </div>
+
+    <div class="row">
+        <% produtos.map(function(value) { %>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="/img/produtos/<%= value.produtoImagem %>" class="card-img-top" alt="<%= value.produtoNome %>">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title"><%= value.produtoNome %></h5>
+                        <p class="card-text mb-1"><strong>Código:</strong> <%= value.produtoCodigo %></p>
+                        <p class="card-text mb-1"><strong>Categoria:</strong> <%= value.categoriaNome %></p>
+                        <p class="card-text mb-1"><strong>Marca:</strong> <%= value.marcaNome %></p>
+                        <p class="card-text mb-1"><strong>Quantidade:</strong> <%= value.produtoQuantidade %></p>
+                        <p class="card-text mb-2"><strong>Preço:</strong> R$ <%= Number(value.produtoValor).toFixed(2) %></p>
+                        <button class="btn btn-success mt-auto btnCarrinho" data-produto='<%- JSON.stringify(value) %>'>
+                            <i class="fas fa-shopping-cart"></i> Adicionar ao carrinho
+                        </button>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</div>

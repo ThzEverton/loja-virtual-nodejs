@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Seu Carrinho</title>
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Segoe+UI:400,600&display=swap">
+
+  <!-- Font Awesome -->
+  <link href="/css/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+  <!-- AdminLTE / Bootstrap -->
+  <link rel="stylesheet" href="/css/adminlte.min.css">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f9;
+      padding: 30px;
+      color: #333;
+    }
+
+    .container-cart {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    .cart-item {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .cart-item-info {
+      flex-grow: 1;
+    }
+
+    .cart-item strong {
+      display: inline-block;
+      min-width: 80px;
+    }
+
+    .btn-area {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .btn {
+      margin: 0 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-limpar {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .btn-voltar {
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+    }
+
+    .btn-voltar:hover,
+    .btn-limpar:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-cart">
+    <h2>🛒 Seu Carrinho</h2>
+
+    <div id="carrinho">
+      <!-- Itens serão renderizados aqui -->
+    </div>
+
+    <div class="btn-area">
+      <button class="btn btn-limpar" onclick="limparCarrinho()">
+        <i class="fas fa-trash-alt"></i> Limpar Carrinho
+      </button>
+      <a href="/" class="btn-voltar">
+        <i class="fas fa-arrow-left"></i> Voltar para a loja
+      </a>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="/js/jquery/jquery.min.js"></script>
+  <script src="/js/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/adminlte.min.js"></script>
+  <script src="/js/Produto/carrinho.js"></script>
+</body>
+</html>
