@@ -14,5 +14,6 @@
   "private": true,
   "scripts": {
     "start": "node server.js"
-  }
+  },
+  "description": "E-commerce em Node.js, Express, EJS e MySQL com painel administrativo."
 }
